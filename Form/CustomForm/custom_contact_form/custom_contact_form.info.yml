@@ -1,0 +1,5 @@
+name: Custom Contact Form
+type: module
+description: This is a custom contact form to demonstrate formAPI
+core_version_requirement: ^8 || ^9
+package: Devzone86
