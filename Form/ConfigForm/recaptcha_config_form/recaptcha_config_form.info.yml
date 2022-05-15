@@ -1,0 +1,5 @@
+name: Recaptcha Config Form
+type: module
+description: This is a demonstration of config form creation in D8/D9
+core_version_requirement: ^8 || ^9
+package: Devzone86
