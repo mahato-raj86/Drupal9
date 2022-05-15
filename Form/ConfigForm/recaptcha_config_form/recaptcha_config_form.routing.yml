@@ -2,7 +2,7 @@ recaptcha_config_form.recaptcha_setting_form:
   path: '/admin/config/recaptcha_config_form/recaptcha_setting'
   defaults:
     _form: '\Drupal\recaptcha_config_form\Form\RecaptchaSettingForm'
-    _title: 'Recaptcha Configuration'
+    _title: 'reCAPTCHA keys'
   requirements:
     _permission: 'administer site configuration'
   options:

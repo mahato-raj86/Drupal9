@@ -1,6 +1,6 @@
 recaptcha_config_form.recaptcha_setting_form:
   title: 'RecaptchaSettingForm'
   route_name: recaptcha_config_form.recaptcha_setting_form
-  description: 'Configure you captcha settings'
+  description: 'Manage reCaptcha keys '
   parent: system.admin_config_system
   weight: 98
