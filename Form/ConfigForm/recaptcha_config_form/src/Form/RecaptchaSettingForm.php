@@ -24,7 +24,7 @@ Class RecaptchaSettingForm extends ConfigFormBase
      * {@inheritdoc}
      */
     public function getFormId(){
-        return 'recaptcha_setting_form';
+        return 'recaptcha_setting_form';//a unique identifier 
     }
 
     /**
@@ -34,13 +34,15 @@ Class RecaptchaSettingForm extends ConfigFormBase
         $config = $this->config('recaptcha_config_form.recaptcha_setting');
         $form['recaptcha_site_key'] = array(
             '#type' => 'textfield',
-            '#title' => $this->t('RECAPTCHA SITE KEY'),
+            '#title' => $this->t('SITE KEY'),
+            '#description' => $this->t('Use this site key in the HTML code your site serves to users.'),
             '#default_value' => $config->get('recaptcha_site_key'),
         );
         
         $form['recaptcha_secret_key'] = array(
             '#type' => 'textfield',
-            '#title' => $this->t('RECAPTCHA SECRET KEY'),
+            '#title' => $this->t('SECRET KEY'),
+            '#description' => $this->t('Use this secret key for communication between your site and reCAPTCHA.'),
             '#default_value' => $config->get('recaptcha_secret_key'),
         );
         return parent::buildForm($form,$form_state);
