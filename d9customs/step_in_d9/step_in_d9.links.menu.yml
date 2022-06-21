@@ -1,0 +1,23 @@
+#menu for settings form
+step_in_d9.settings_form:
+  title: 'SettingsForm'
+  route_name: step_in_d9.settings_form
+  description: 'A description for the menu entry'
+  parent: system.admin_config_system
+  weight: 99
+
+#menu for recaptcha config
+step_in_d9.recaptcha_setting_form:
+  title: 'RecaptchaSettingForm'
+  route_name: step_in_d9.recaptcha_setting_form
+  description: 'Manage reCaptcha keys '
+  parent: system.admin_config_system
+  weight: 98
+
+#menu for contact form
+step_in_d9.contact_form:
+  title: 'Contact Form'
+  route_name: step_in_d9.contact_form
+  description: 'Contact us form '
+  parent: main
+  weight: 20

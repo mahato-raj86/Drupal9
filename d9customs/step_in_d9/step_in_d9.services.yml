@@ -1,0 +1,13 @@
+services:
+  step_in_d9.config_subscriber:
+    class: \Drupal\step_in_d9\EventSubscriber\ConfigSubscriber
+    tags:
+      - { name: 'event_subscriber' }
+  step_in_d9.custom_event_subscriber:
+    class: \Drupal\step_in_d9\EventSubscriber\CustomEventSubscriber
+    tags:
+      - { name: 'event_subscriber' }
+  step_in_d9.login_route_subscriber:
+    class: \Drupal\step_in_d9\Routing\LoginRouteSubscriber
+    tags:
+      - { name: 'event_subscriber' }

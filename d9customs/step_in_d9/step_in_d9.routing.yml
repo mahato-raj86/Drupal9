@@ -1,0 +1,35 @@
+step_in_d9.settings_form:
+  path: '/admin/config/step_in_d9/settings'
+  defaults:
+    _form: '\Drupal\step_in_d9\Form\SettingsForm'
+    _title: 'Configuration form screen'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
+
+step_in_d9.recaptcha_setting_form:
+  path: '/admin/config/step_in_d9/recaptcha_setting'
+  defaults:
+    _form: '\Drupal\step_in_d9\Form\RecaptchaSettingForm'
+    _title: 'reCAPTCHA keys'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _admin_route: TRUE
+
+step_in_d9.contact_form:
+  path: '/contacts'
+  defaults:
+    _title: 'Contact Form'
+    _form: '\Drupal\step_in_d9\Form\ContactForm'
+  requirements:
+   _permission: 'access content'
+
+step_in_d9.comment_form:
+  path: '/blog/comment'
+  defaults:
+    _title: 'Comment Form'
+    _form: '\Drupal\step_in_d9\Form\CommentForm'
+  requirements:
+   _permission: 'access content'

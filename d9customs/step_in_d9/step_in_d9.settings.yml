@@ -1,0 +1,3 @@
+recaptcha_setting:
+  recaptcha_site_key: site_key
+  recaptcha_secret_key: secret_key

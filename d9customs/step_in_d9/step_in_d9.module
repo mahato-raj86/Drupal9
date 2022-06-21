@@ -1,0 +1,35 @@
+<?php
+use Drupal\Node\NodeInterface;
+use Drupal\step_in_d9\Event\NodePublished;
+/**
+ * 
+ *  Implements hook_theme() 
+ * 
+ */
+
+function step_in_d9_theme(){
+    return [
+        'step_in_d9_block' => [
+            'variables' => [
+                'data'  =>[],
+            ],
+        ],
+    ];
+}
+
+
+/**
+ * Dispatching the custom event author_info created on NodePublished Event
+ * 
+ * Implements hook_Entity_Type_insert()
+ */
+
+ function step_in_d9_node_insert(NodeInterface $node){
+     //instansiate the event
+     $event = new NodePublished($node);
+
+     //load the event_disaptcher service and dispatch the custom event
+    $event_dispatcher = \Drupal::service('event_dispatcher');
+    $event_dispatcher->dispatch(NodePublished::EVENT_NAME, $event);
+
+ }
